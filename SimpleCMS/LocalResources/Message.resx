@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlphanumText" xml:space="preserve">
+    <value>该输入项只能包含半角字母,数字和_</value>
+    <comment>验证</comment>
+  </data>
+  <data name="AlphaText" xml:space="preserve">
+    <value>该输入项只能包含半角字母和_</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>文章类别</value>
+    <comment>Category</comment>
+  </data>
+  <data name="CategoryContent" xml:space="preserve">
+    <value>内容</value>
+    <comment>Category</comment>
+  </data>
+  <data name="CategoryImage" xml:space="preserve">
+    <value>题图</value>
+    <comment>Category</comment>
+  </data>
+  <data name="CategorySortOrder" xml:space="preserve">
+    <value>排序序数</value>
+    <comment>Category</comment>
+  </data>
+  <data name="CategoryState" xml:space="preserve">
+    <value>状态</value>
+    <comment>Category</comment>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>标题</value>
+    <comment>Category</comment>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>文章</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentBody" xml:space="preserve">
+    <value>内容</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentCreated" xml:space="preserve">
+    <value>创建日期</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentHits" xml:space="preserve">
+    <value>点击量</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentImage" xml:space="preserve">
+    <value>题图</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentSortOrder" xml:space="preserve">
+    <value>排序序数</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentState" xml:space="preserve">
+    <value>状态</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentSummary" xml:space="preserve">
+    <value>摘要</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentTitle" xml:space="preserve">
+    <value>标题</value>
+    <comment>Content</comment>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>新增</value>
+    <comment>操作</comment>
+  </data>
+  <data name="DefaultDateFormat" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+    <comment>操作</comment>
+  </data>
+  <data name="DefaultDatetimeFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:mm:ss</value>
+    <comment>操作</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+    <comment>操作</comment>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value> {0} {1} 已删除</value>
+    <comment>操作</comment>
+  </data>
+  <data name="DeletedNotExist" xml:space="preserve">
+    <value>没有找到要删除的记录</value>
+    <comment>操作</comment>
+  </data>
+  <data name="EmailText" xml:space="preserve">
+    <value>该输入项必须是电子邮件地址，格式如： "user@example.com"</value>
+    <comment>验证</comment>
+  </data>
+  <data name="ForbidDelete" xml:space="preserve">
+    <value>禁止删除 {0}，因为有与之相关联的记录，请先删除与之关联的记录再删除</value>
+    <comment>操作</comment>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>输入值非法</value>
+    <comment>验证</comment>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>{0} 是无效的日期 - 必须符合格式： {1}</value>
+    <comment>验证</comment>
+  </data>
+  <data name="IsApprove" xml:space="preserve">
+    <value>用户已禁止登录</value>
+    <comment>操作</comment>
+  </data>
+  <data name="LockedOut" xml:space="preserve">
+    <value>用户已被锁定</value>
+    <comment>操作</comment>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>该输入项的最大值是 {0}</value>
+    <comment>验证</comment>
+  </data>
+  <data name="MaxDate" xml:space="preserve">
+    <value>该输入项的日期必须在 {0} 之前</value>
+    <comment>验证</comment>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>该输入项的最大长度是 {0} 个字符</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>该输入项的最小值是 {0}</value>
+    <comment>验证</comment>
+  </data>
+  <data name="MinDate" xml:space="preserve">
+    <value>该输入项的日期必须在 {0} 之前</value>
+    <comment>验证</comment>
+  </data>
+  <data name="MinLength" xml:space="preserve">
+    <value>该输入项的最小长度是 {0} 个字符</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>{0} 不是有效的手机号码</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Nan" xml:space="preserve">
+    <value>{0} 不是有效数值</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码必须由字母和数字组成</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>该输入项的值必须在 {0} 与 {1} 之间</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>该输入项为必输项</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>角色</value>
+    <comment>Role</comment>
+  </data>
+  <data name="SignInFailure" xml:space="preserve">
+    <value>错误的用户名或密码</value>
+    <comment>操作</comment>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>标签</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="TagTagName" xml:space="preserve">
+    <value>标签名称</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+    <comment>操作</comment>
+  </data>
+  <data name="UpdatedNoExist" xml:space="preserve">
+    <value>要更新的 {0} 不存在或已被删除</value>
+    <comment>操作</comment>
+  </data>
+  <data name="UrlText" xml:space="preserve">
+    <value>该输入项必须是URL地址，格式如： "http://www.example.com"</value>
+    <comment>验证</comment>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+    <comment>User</comment>
+  </data>
+  <data name="UserPassword" xml:space="preserve">
+    <value>密码</value>
+    <comment>User</comment>
+  </data>
+  <data name="UserUserName" xml:space="preserve">
+    <value>用户名</value>
+    <comment>User</comment>
+  </data>
+  <data name="VerifyCode" xml:space="preserve">
+    <value>验证码错误</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>{0} 与 {1} 的值不匹配</value>
+    <comment>验证</comment>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>确认密码</value>
+    <comment>PasswordReset</comment>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>新密码</value>
+    <comment>PasswordReset</comment>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>旧密码</value>
+    <comment>PasswordReset</comment>
+  </data>
+  <data name="OldPasswordEqualNew" xml:space="preserve">
+    <value>新密码不能与旧密码相同</value>
+    <comment>验证</comment>
+  </data>
+  <data name="NoAllowSortDefine" xml:space="preserve">
+    <value>没有找到符合要求的排序信息</value>
+    <comment>HttpException</comment>
+  </data>
+  <data name="CheckChangeFieldNoExist" xml:space="preserve">
+    <value>要更改的字段不存在</value>
+  </data>
+  <data name="PasswordNoEqual" xml:space="preserve">
+    <value>两次输入的密码不同</value>
+    <comment>验证</comment>
+  </data>
+  <data name="UserRoles" xml:space="preserve">
+    <value>没有选择角色</value>
+    <comment>User</comment>
+  </data>
+  <data name="Exists" xml:space="preserve">
+    <value>{0} “{1}”已存在</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>音频</value>
+    <comment>Media</comment>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>图片</value>
+    <comment>Media</comment>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>媒体</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaDescription" xml:space="preserve">
+    <value>描述</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaFieldName" xml:space="preserve">
+    <value>文件名</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaPath" xml:space="preserve">
+    <value>路径</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaSize" xml:space="preserve">
+    <value>文件大小</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaType" xml:space="preserve">
+    <value>媒体类型</value>
+    <comment>Media</comment>
+  </data>
+  <data name="MediaUploadedDate" xml:space="preserve">
+    <value>上传日期</value>
+    <comment>Media</comment>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>视频</value>
+    <comment>Media</comment>
+  </data>
+  <data name="FileSizeNotAllow" xml:space="preserve">
+    <value>文件大小超出限制范围</value>
+    <comment>Upload</comment>
+  </data>
+  <data name="FileTypeNotAllow" xml:space="preserve">
+    <value>不允许的文件类型</value>
+    <comment>Upload</comment>
+  </data>
+  <data name="NoFileUpload" xml:space="preserve">
+    <value>没有上传任何文件</value>
+    <comment>Upload</comment>
+  </data>
+  <data name="CategoryParentId" xml:space="preserve">
+    <value>父类别</value>
+    <comment>Category</comment>
+  </data>
+  <data name="InvalidCategoryId" xml:space="preserve">
+    <value>非法的类别</value>
+    <comment>验证</comment>
+  </data>
+  <data name="NotChildToParent" xml:space="preserve">
+    <value>不能将子节点设置为当前节点的父节点</value>
+    <comment>验证</comment>
+  </data>
+  <data name="RecordNoExist" xml:space="preserve">
+    <value>要获取的信息不存在或已被删除</value>
+  </data>
+  <data name="NotSelfToParent" xml:space="preserve">
+    <value>不允许将节点自身作为自己的父节点</value>
+    <comment>验证</comment>
+  </data>
+  <data name="HasChild" xml:space="preserve">
+    <value>节点下还有子节点，不允许删除</value>
+    <comment>Category</comment>
+  </data>
+  <data name="AllArticle" xml:space="preserve">
+    <value>全部文章</value>
+  </data>
+  <data name="CategoryArticle" xml:space="preserve">
+    <value>文章类别</value>
+  </data>
+  <data name="NoCategoryArticle" xml:space="preserve">
+    <value>未分类</value>
+  </data>
+  <data name="ContentCategoryId" xml:space="preserve">
+    <value>类别编号</value>
+    <comment>Content</comment>
+  </data>
+  <data name="ContentTags" xml:space="preserve">
+    <value>标签</value>
+    <comment>Content</comment>
+  </data>
+  <data name="Forbid403" xml:space="preserve">
+    <value>没有访问权限</value>
+  </data>
+  <data name="InternalServerError500" xml:space="preserve">
+    <value>服务器内部错误</value>
+  </data>
+  <data name="NotFound404" xml:space="preserve">
+    <value>没有找到页面</value>
+  </data>
+  <data name="OtherError" xml:space="preserve">
+    <value>发生错误</value>
+  </data>
+</root>
