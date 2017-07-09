@@ -15,6 +15,7 @@ Ext.application({
         'SimpleCMS.util.Config',
         'SimpleCMS.util.Url',
         'SimpleCMS.util.State',
+        'SimpleCMS.util.Failed',
         'SimpleCMS.ux.*',
         'SimpleCMS.view.main.Main'
     ],

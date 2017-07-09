@@ -176,9 +176,11 @@
     <Content Include="Sencha\app\locale\zh_CN.js" />
     <Content Include="Sencha\app\store\Personnel.js" />
     <Content Include="Sencha\app\util\Config.js" />
+    <Content Include="Sencha\app\util\Failed.js" />
     <Content Include="Sencha\app\util\State.js" />
     <Content Include="Sencha\app\util\Toast.js" />
     <Content Include="Sencha\app\util\Url.js" />
+    <Content Include="Sencha\app\ux\data\proxy\Foramt.js" />
     <Content Include="Sencha\app\ux\form\field\VType.js" />
     <Content Include="Sencha\app\view\main\List.js" />
     <Content Include="Sencha\app\view\main\Main.js" />
@@ -5955,6 +5957,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\AppSettings.cs" />
+    <Compile Include="Helper\ExtJs.cs" />
     <Compile Include="LocalResources\Message.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -7774,7 +7777,6 @@
     <Folder Include="Sencha\packages\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\State\" />
-    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LocalResources\Message.resx">
