@@ -15,10 +15,11 @@ Ext.define('SimpleCMS.view.main.MainController', {
     },
 
     lastView: null,
+    isLogin:false,
 
     setCurrentView: function(hashTag) {
         hashTag = (hashTag || '').toLowerCase();
-
+        if (!this.isLogin && hashTag !== 'login') return;
         var me = this,
             refs = me.getReferences(),
             mainCard = refs.mainCardPanel,
@@ -139,40 +140,53 @@ Ext.define('SimpleCMS.view.main.MainController', {
         }
     },
 
-    onMainViewRender:function() {
-        if (!window.location.hash) {
-            this.redirectTo("dashboard");
-        }
+    onMainViewRender: function () {
+        var me = this;
+        Ext.Msg.wait(I18N.GetUserInfo);
+        Ext.Ajax.request({
+            url: URL.get('account', 'userinfo'),
+            success: function (response, opts) {
+                var me = this,
+                    refs = me.getReferences(),
+                    navigationList = refs.navigationTreeList,
+                    store = navigationList.getStore(),
+                    root = store.getRoot(),
+                    viewModel = me.getViewModel(),
+                    obj = Ext.decode(response.responseText, true),
+                    hash, node, parentNode, roles;
+                Ext.Msg.hide();
+                if (Ext.isEmpty(obj) || !obj.success) {
+                    me.setCurrentView("login");
+                    return;
+                }
+                viewModel.set('UserName', obj.data.UserInfo.UserName);
+                CFG.setUserInfo(obj.data.UserInfo);
+                root.appendChild(obj.data.Menu);
+                Ext.Msg.wait(I18N.StateRestoreWait);
+                STATE.restore();
+                Ext.Msg.hide();
+                me.isLogin = true;
+                hash = window.location.hash.substr(1);
+                me.setCurrentView(Ext.isEmpty(hash) || hash === 'login' ? "articleView" : hash);
+            },
+            failure: FAILED.ajax,
+            scope: me
+        });
     },
 
     onRouteChange:function(id){
         this.setCurrentView(id);
     },
 
-    onSearchRouteChange: function () {
-        this.setCurrentView('searchresults');
-    },
-
-    onSwitchToModern: function () {
-        Ext.Msg.confirm('Switch to Modern', 'Are you sure you want to switch toolkits?',
-                        this.onSwitchToModernConfirmed, this);
-    },
-
-    onSwitchToModernConfirmed: function (choice) {
-        if (choice === 'yes') {
-            var s = location.search;
-
-            // Strip "?classic" or "&classic" with optionally more "&foo" tokens
-            // following and ensure we don't start with "?".
-            s = s.replace(/(^\?|&)classic($|&)/, '').replace(/^\?/, '');
-
-            // Add "?modern&" before the remaining tokens and strip & if there are
-            // none.
-            location.search = ('?modern&' + s).replace(/&$/, '');
-        }
-    },
-
-    onEmailRouteChange: function () {
-        this.setCurrentView('email');
+    onLogout: function () {
+        Ext.Ajax.request({
+            url: URL.get('account', 'logout'),
+            scope: this,
+            success: function (response, opts) {
+                window.location.reload();
+            }
+        });
     }
+
+
 });

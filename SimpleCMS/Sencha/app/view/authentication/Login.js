@@ -66,6 +66,36 @@ Ext.define('SimpleCMS.view.authentication.Login', {
                     }
                 },
                 {
+                    xtype: 'textfield',
+                    cls: 'auth-textbox',
+                    name: 'VerifyCode',
+                    height: 55,
+                    hideLabel: true,
+                    allowBlank: false,
+                    maxLength: 6,
+                    minLength: 6,
+                    emptyText: I18N.VerifyCode,
+                    triggers: {
+                        glyphed: {
+                            cls: 'trigger-glyph-noop auth-verifycode-trigger'
+                        }
+                    }
+                },
+                {
+                    xtype: 'image',
+                    height: 55,
+                    src: '',
+                    title: I18N.VerifyCodeAlt,
+                    alt: I18N.VerifyCodeAlt,
+                    style: 'cursor:pointer',
+                    listeners: {
+                        click: {
+                            fn: 'onRefrestVcode',
+                            element: 'el'
+                        }
+                    }
+                },
+                {
                     xtype: 'container',
                     layout: 'hbox',
                     items: [
@@ -99,5 +129,10 @@ Ext.define('SimpleCMS.view.authentication.Login', {
     initComponent: function() {
         this.addCls('user-login-register-container');
         this.callParent(arguments);
+    },
+
+    listeners: {
+        show: 'onLoginViewShow'
     }
+
 });

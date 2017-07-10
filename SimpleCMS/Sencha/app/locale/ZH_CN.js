@@ -14,6 +14,10 @@
         FailedOtherCode:'错误代码：{0}<br\>响应：{1}',
 
         AppTitle: '简单的CMS系统',
+        DefaultMessageTitle: '信息',
+        GetUserInfo: '正在加载用户信息......',
+        StateRestoreWait: '正在恢复状态信息...',
+        EmptyText: '没有任何数据',
 
         ComingSoon: '即将推出！',
         StayTunedForUpdates: '敬请期待。',
@@ -22,8 +26,6 @@
 
         DefaultDatetimeFormat: 'Y-m-d H:i:s',
         DefaultDateFormat: 'Y-m-d',
-
-        DefaultMessageTitle: '信息',
 
         Logout: '退出',
         LoginTitle: '登录',

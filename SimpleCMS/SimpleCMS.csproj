@@ -182,6 +182,7 @@
     <Content Include="Sencha\app\util\Url.js" />
     <Content Include="Sencha\app\ux\data\proxy\Foramt.js" />
     <Content Include="Sencha\app\ux\form\field\VType.js" />
+    <Content Include="Sencha\app\view\article\Main.js" />
     <Content Include="Sencha\app\view\authentication\AuthenticationController.js" />
     <Content Include="Sencha\app\view\authentication\AuthenticationModel.js" />
     <Content Include="Sencha\app\view\authentication\Dialog.js" />
@@ -5958,26 +5959,32 @@
     <Content Include="Sencha\sass\example\fashion.html" />
     <Content Include="Sencha\sass\example\render.js" />
     <Content Include="Sencha\sass\example\theme.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StateController.cs" />
+    <Compile Include="Controllers\VerifyCodeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\AppSettings.cs" />
     <Compile Include="Helper\ExtJs.cs" />
+    <Compile Include="Helper\VerifyCode.cs" />
     <Compile Include="LocalResources\Message.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Message.resx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Content.cs" />
@@ -7797,8 +7804,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Sencha\packages\" />
+    <Folder Include="Views\Account\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\State\" />
+    <Folder Include="Views\VverifyCode\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LocalResources\Message.resx">

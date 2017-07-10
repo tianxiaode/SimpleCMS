@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using SimpleCMS.Models;
 
@@ -74,5 +75,15 @@ namespace SimpleCMS.Controllers
                 _dbContext = value;
             }
         }
+
+        public ApplicationUser CurrentUser
+        {
+            get
+            {
+                var currentUser = UserManager.FindByName(User.Identity.Name);
+                return currentUser;
+            }
+        }
+
     }
 }

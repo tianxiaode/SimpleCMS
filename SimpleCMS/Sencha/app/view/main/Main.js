@@ -8,7 +8,8 @@ Ext.define('SimpleCMS.view.main.Main', {
         'SimpleCMS.view.main.MainModel',
         'SimpleCMS.view.main.MainContainerWrap',
         'SimpleCMS.view.authentication.*',
-        'SimpleCMS.view.pages.*'
+        'SimpleCMS.view.pages.*',
+        'SimpleCMS.view.article.Main'
     ],
 
     controller: 'main',
@@ -48,6 +49,19 @@ Ext.define('SimpleCMS.view.main.Main', {
                     handler: 'onToggleNavigationSize'
                 },
                 '->',
+                {
+                    iconCls: 'x-fa fa-key',
+                    ui: 'header',
+                    tooltip: I18N.PasswordResetTitle,
+                    href: '#passwordreset',
+                    hrefTarget: '_self'
+                },
+                {
+                    ui: 'header',
+                    iconCls: 'x-fa fa-power-off',
+                    handler: 'onLogout',
+                    tooltip: I18N.Logout
+                },
                 {
                     xtype: 'tbtext',
                     bind: { text: '{UserName}' },
