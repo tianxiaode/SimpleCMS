@@ -14,6 +14,7 @@ Ext.define('SimpleCMS.Application', {
 
     stores: [
         // TODO: add global / shared stores here
+        'NavigationTree'
     ],
     
     launch: function () {

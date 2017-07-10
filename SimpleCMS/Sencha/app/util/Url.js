@@ -47,7 +47,17 @@
             }
         }
         return result;
-    }
+    },
 
+    DEBUG: true,
+
+    resources: {
+        logo: 'resources/images/company-logo.png'
+    },
+
+    getResource: function (res) {
+        var me = this;
+        return ROOTPATH + (me.DEBUG ? '/sencha/' : '/') + me.resources[res];
+    }
 
 });

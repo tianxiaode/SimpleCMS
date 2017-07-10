@@ -174,7 +174,7 @@
     <Content Include="Sencha\app\Application.js" />
     <Content Include="Sencha\app\locale\Locale.js" />
     <Content Include="Sencha\app\locale\zh_CN.js" />
-    <Content Include="Sencha\app\store\Personnel.js" />
+    <Content Include="Sencha\app\store\NavigationTree.js" />
     <Content Include="Sencha\app\util\Config.js" />
     <Content Include="Sencha\app\util\Failed.js" />
     <Content Include="Sencha\app\util\State.js" />
@@ -182,10 +182,21 @@
     <Content Include="Sencha\app\util\Url.js" />
     <Content Include="Sencha\app\ux\data\proxy\Foramt.js" />
     <Content Include="Sencha\app\ux\form\field\VType.js" />
-    <Content Include="Sencha\app\view\main\List.js" />
+    <Content Include="Sencha\app\view\authentication\AuthenticationController.js" />
+    <Content Include="Sencha\app\view\authentication\AuthenticationModel.js" />
+    <Content Include="Sencha\app\view\authentication\Dialog.js" />
+    <Content Include="Sencha\app\view\authentication\LockingWindow.js" />
+    <Content Include="Sencha\app\view\authentication\LockScreen.js" />
+    <Content Include="Sencha\app\view\authentication\Login.js" />
+    <Content Include="Sencha\app\view\authentication\PasswordReset.js" />
     <Content Include="Sencha\app\view\main\Main.js" />
+    <Content Include="Sencha\app\view\main\MainContainerWrap.js" />
     <Content Include="Sencha\app\view\main\MainController.js" />
     <Content Include="Sencha\app\view\main\MainModel.js" />
+    <Content Include="Sencha\app\view\pages\BlankPage.js" />
+    <Content Include="Sencha\app\view\pages\Error404Window.js" />
+    <Content Include="Sencha\app\view\pages\Error500Window.js" />
+    <Content Include="Sencha\app\view\pages\ErrorBase.js" />
     <Content Include="Sencha\bootstrap.css" />
     <Content Include="Sencha\bootstrap.js" />
     <Content Include="Sencha\build.xml" />
@@ -5938,6 +5949,9 @@
     <Content Include="Sencha\ext\sass\example\fashion.html" />
     <Content Include="Sencha\index.html" />
     <Content Include="Sencha\overrides\util\Sorter.js" />
+    <Content Include="Sencha\resources\images\company-logo.png" />
+    <Content Include="Sencha\resources\images\error-page-background.jpg" />
+    <Content Include="Sencha\resources\images\lock-screen-background.jpg" />
     <Content Include="Sencha\sass\example\bootstrap.css" />
     <Content Include="Sencha\sass\example\bootstrap.js" />
     <Content Include="Sencha\sass\example\custom.js" />
@@ -7765,6 +7779,14 @@
     <Content Include="Sencha\sass\var\all.scss" />
     <Content Include="Sencha\workspace.json" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Sencha\sass\src\Application.scss" />
+    <Content Include="Sencha\sass\var\view\main\Main.scss" />
+    <Content Include="Sencha\sass\src\view\authentication\Dialog.scss" />
+    <Content Include="Sencha\sass\src\view\authentication\LockingWindow.scss" />
+    <Content Include="Sencha\sass\src\view\pages\BlankPage.scss" />
+    <Content Include="Sencha\sass\src\view\pages\Error404Window.scss" />
+    <Content Include="Sencha\sass\var\view\authentication\Dialog.scss" />
+    <Content Include="Sencha\sass\var\view\pages\BlankPage.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

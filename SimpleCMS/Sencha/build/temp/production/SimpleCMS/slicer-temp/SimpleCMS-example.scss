@@ -1013,7 +1013,7 @@ $include-state: dynamic(true);;
 $include-simplecms-application: dynamic(true);;
 $include-simplecms-locale-locale: dynamic(true);;
 $include-simplecms-locale-zh_cn: dynamic(true);;
-$include-simplecms-store-personnel: dynamic(true);;
+$include-simplecms-store-navigationtree: dynamic(true);;
 $include-simplecms-util-config: dynamic(true);;
 $include-simplecms-util-failed: dynamic(true);;
 $include-simplecms-util-state: dynamic(true);;
@@ -1021,10 +1021,21 @@ $include-simplecms-util-toast: dynamic(true);;
 $include-simplecms-util-url: dynamic(true);;
 $include-simplecms-ux-data-proxy-format: dynamic(true);;
 $include-simplecms-ux-form-field-vtypes: dynamic(true);;
-$include-simplecms-view-main-list: dynamic(true);;
+$include-simplecms-view-authentication-authenticationcontroller: dynamic(true);;
+$include-simplecms-view-authentication-authenticationmodel: dynamic(true);;
+$include-simplecms-view-authentication-dialog: dynamic(true);;
+$include-simplecms-view-authentication-lockscreen: dynamic(true);;
+$include-simplecms-view-authentication-lockingwindow: dynamic(true);;
+$include-simplecms-view-authentication-login: dynamic(true);;
+$include-simplecms-view-authentication-passwordreset: dynamic(true);;
 $include-simplecms-view-main-main: dynamic(true);;
+$include-simplecms-view-main-maincontainerwrap: dynamic(true);;
 $include-simplecms-view-main-maincontroller: dynamic(true);;
 $include-simplecms-view-main-mainmodel: dynamic(true);;
+$include-simplecms-view-pages-blankpage: dynamic(true);;
+$include-simplecms-view-pages-error404window: dynamic(true);;
+$include-simplecms-view-pages-error500window: dynamic(true);;
+$include-simplecms-view-pages-errorbase: dynamic(true);;
 $include-toast: dynamic(true);;
 $include-url: dynamic(true);;
 
@@ -1297,6 +1308,16 @@ $current-resource-root: $SimpleCMS-resource-root;
 $relative-image-path-for-uis: $SimpleCMS-resource-path;
 @import '../../../../../sass/var/all';
 
+/* including package SimpleCMS */
+$SimpleCMS-resource-root: '' !default;
+$SimpleCMS-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $SimpleCMS-resource-root;
+$relative-image-path-for-uis: $SimpleCMS-resource-path;
+@import '../../../../../sass/var/view/authentication/Dialog';
+@import '../../../../../sass/var/view/pages/BlankPage';
+@import '../../../../../sass/var/view/main/Main';
+
 
 /* ======================== RULE ======================== */
 
@@ -1539,4 +1560,9 @@ $SimpleCMS-resource-path: 'images' !default;
 $current-package: false;
 $current-resource-root: $SimpleCMS-resource-root;
 $relative-image-path-for-uis: $SimpleCMS-resource-path;
+@import '../../../../../sass/src/Application';
+@import '../../../../../sass/src/view/authentication/Dialog';
+@import '../../../../../sass/src/view/authentication/LockingWindow';
+@import '../../../../../sass/src/view/pages/BlankPage';
+@import '../../../../../sass/src/view/pages/Error404Window';
 @import '../../../../../sass/src/view/main/Main';
