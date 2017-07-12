@@ -1,0 +1,52 @@
+﻿.email-inbox-panel {
+    .x-grid-body {
+        border-width: 1px;
+    }
+
+    .x-grid-cell-special {
+        border-right-width: 0;
+    }
+}
+.message-tips {
+    .x-fa {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .message-tips-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 5px 0;
+
+            &:before {
+                font-family: FontAwesome;
+                content: "\f111";
+                padding-right: 10px;
+            }
+
+            &.pointone:before {
+                color: $FAQ-tip-list-color-1;
+            }
+
+            &.pointtwo:before {
+                color: $FAQ-tip-list-color-2;
+            }
+
+            &.pointthree:before {
+                color: $FAQ-tip-list-color-3;
+            }
+
+            &.pointfour:before {
+                color: $FAQ-tip-list-color-4;
+            }
+        }
+    }
+
+    .borderCls {
+        border-bottom: 1px solid $base-border-color;
+    }
+}
+

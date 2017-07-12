@@ -85,5 +85,8 @@ namespace SimpleCMS.Controllers
             }
         }
 
+        public readonly string MessageList = "<div class='message-tips'><ul class='message-tips-list'>{0}</ul></div>";
+        public readonly string MessageListItem = "<li class='{0}'>{1}</li>";
+
     }
 }

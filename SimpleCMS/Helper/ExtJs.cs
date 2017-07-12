@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json.Linq;
+using SimpleCMS.LocalResources;
+using System.Linq.Dynamic;
 
 namespace SimpleCMS.Helper
 {
@@ -50,6 +52,32 @@ namespace SimpleCMS.Helper
                     modelState[c].Errors.Select(m => m.ErrorMessage))));
             }
             return errors;
+        }
+
+        public static readonly string SortFormatString = "it.{0} {1}";
+
+        public static IQueryable<T> OrderBy<T>(string sortStr, JObject allowSorts, IQueryable<T> queryable)
+        {
+            var first = allowSorts.Properties().FirstOrDefault();
+            if (first == null || string.IsNullOrEmpty((string)first.Value)) throw new HttpException(500, Message.NoAllowSortDefine);
+            var defaultSort = string.Format(SortFormatString, first.Value, "");
+            if (string.IsNullOrEmpty(sortStr)) return queryable.OrderBy(defaultSort);
+            var sortObject = JArray.Parse(sortStr);
+            var q = from p in sortObject
+                let name = (string)p["property"]
+                let dir = (string)p["direction"] == "ASC" ? "ASC" : "DESC"
+                from KeyValuePair<string, JToken> property in allowSorts
+                let submitname = property.Key
+                where name.Equals(submitname)
+                select string.Format(SortFormatString, property.Value, dir);
+            var sorter = string.Join(",", q);
+            return queryable.OrderBy(string.IsNullOrEmpty(sorter) ? defaultSort : sorter);
+        }
+
+        public static IQueryable<T> Pagination<T>(int start, int limit, int total, IQueryable<T> queryable)
+        {
+            if (start < 0 || limit <= 0 || limit > 100) return null;
+            return start > total ? null : queryable.Skip(start).Take(limit);
         }
 
     }

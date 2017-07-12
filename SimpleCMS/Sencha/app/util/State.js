@@ -22,9 +22,10 @@
         provider.on('statechange', me.onStateChange, me);
     },
 
-    onStateChange: function (value) {
+    onStateChange: function (provider, key, value, eOpts) {
         var me = this;
         if (!me.loaded) return;
+        console.log(arguments)
         if (value) {
             Ext.Ajax.request({
                 url: URL.get('state', 'save'),

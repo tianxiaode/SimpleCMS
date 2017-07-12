@@ -466,6 +466,15 @@ namespace SimpleCMS.LocalResources {
         }
         
         /// <summary>
+        ///   查找类似 获取数据失败 的本地化字符串。
+        /// </summary>
+        public static string ListFailure {
+            get {
+                return ResourceManager.GetString("ListFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 用户已被锁定 的本地化字符串。
         /// </summary>
         public static string LockedOut {

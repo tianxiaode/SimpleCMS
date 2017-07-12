@@ -13,10 +13,8 @@ namespace SimpleCMS.Controllers
     public class StateController : BaseController
     {
         // GET: State
-        public void Save()
+        public void Save(string key, string value)
         {
-            var key = Request["key"] ?? "";
-            var value = Request["value"] ?? "";
             if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(value)) return;
             var userId = User.Identity.GetUserId<int>();
             var q = DbContext.UserProfiles.SingleOrDefault(m => m.Keyword.Equals(key) && m.UserProfileType == (byte)UserProfileType.State && m.UserId == userId);

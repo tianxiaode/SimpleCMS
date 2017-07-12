@@ -1,6 +1,4 @@
 ﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -69,9 +67,6 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -174,13 +169,20 @@
     <Content Include="Sencha\app\Application.js" />
     <Content Include="Sencha\app\locale\Locale.js" />
     <Content Include="Sencha\app\locale\zh_CN.js" />
+    <Content Include="Sencha\app\model\Base.js" />
+    <Content Include="Sencha\app\model\User.js" />
     <Content Include="Sencha\app\store\NavigationTree.js" />
     <Content Include="Sencha\app\util\Config.js" />
     <Content Include="Sencha\app\util\Failed.js" />
     <Content Include="Sencha\app\util\State.js" />
     <Content Include="Sencha\app\util\Toast.js" />
     <Content Include="Sencha\app\util\Url.js" />
+    <Content Include="Sencha\app\ux\app\BaseViewController.js" />
+    <Content Include="Sencha\app\ux\button\SaveAndNew.js" />
+    <Content Include="Sencha\app\ux\container\FixedHeightOfFirstItem.js" />
     <Content Include="Sencha\app\ux\data\proxy\Foramt.js" />
+    <Content Include="Sencha\app\ux\form\BaseForm.js" />
+    <Content Include="Sencha\app\ux\form\field\Search.js" />
     <Content Include="Sencha\app\ux\form\field\VType.js" />
     <Content Include="Sencha\app\view\article\Main.js" />
     <Content Include="Sencha\app\view\authentication\AuthenticationController.js" />
@@ -198,6 +200,10 @@
     <Content Include="Sencha\app\view\pages\Error404Window.js" />
     <Content Include="Sencha\app\view\pages\Error500Window.js" />
     <Content Include="Sencha\app\view\pages\ErrorBase.js" />
+    <Content Include="Sencha\app\view\user\Edit.js" />
+    <Content Include="Sencha\app\view\user\Main.js" />
+    <Content Include="Sencha\app\view\user\MainController.js" />
+    <Content Include="Sencha\app\view\user\MainModel.js" />
     <Content Include="Sencha\bootstrap.css" />
     <Content Include="Sencha\bootstrap.js" />
     <Content Include="Sencha\build.xml" />
@@ -5971,6 +5977,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StateController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\VerifyCodeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5991,11 +5998,13 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Media.cs" />
     <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validations\DateTimeExtensions.cs" />
     <Compile Include="Validations\DefaultDateTimeValueAttribute.cs" />
+    <Compile Include="Validations\EmptyOrPasswordValidateAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -7794,6 +7803,8 @@
     <Content Include="Sencha\sass\src\view\pages\Error404Window.scss" />
     <Content Include="Sencha\sass\var\view\authentication\Dialog.scss" />
     <Content Include="Sencha\sass\var\view\pages\BlankPage.scss" />
+    <Content Include="Sencha\sass\src\view\user\Main.scss" />
+    <Content Include="Sencha\sass\var\view\user\Main.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -7807,6 +7818,7 @@
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\State\" />
+    <Folder Include="Views\User\" />
     <Folder Include="Views\VverifyCode\" />
   </ItemGroup>
   <ItemGroup>
@@ -7840,13 +7852,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

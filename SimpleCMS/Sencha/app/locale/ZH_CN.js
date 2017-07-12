@@ -54,11 +54,101 @@
         Return: '返回',
         Required: '该输入项为必输项',
         PasswordNoEqual: '两次输入的密码不同',
+        Count: '共{count}条',
 
         DeleteNoSelection: '请选择要删除的{0}',
         DeleteWaitMsg: '正在删除，请等待……',
         DeleteConfirmMessageTitle: '删除',
-        DeleteConfirmMessage: '<p>确定要删除以下{0}？</p>{1}'
+        DeleteConfirmMessage: '<p>确定要删除以下{0}？</p>{1}',
+
+        Add: '新建',
+        Edit: '编辑',
+        Delete: '删除',
+        Details: '详细信息',
+        Refresh: '刷新',
+        Search: '搜索',
+        Cancel: '取消',
+        Selected: '确定',
+        SelectedTitleImage: '选择题图',
+        SelectedMedia: '选择媒体',
+        InsertMedia: '从媒体库插入媒体',
+        NoModel: '没有定义模型',
+        NoSelection: '请选择{0}，再{1}',
+        Loading: '正在加载数据，请等待......',
+        SaveAndNewButtonText: '保存和新建',
+        SaveButtonText: '保存',
+        PasswordNoChange: '注意：如果不修改密码，可留空',
+        Sorter: '排序',
+        SorterASC: '正序',
+        SorterDESC: '倒序',
+        EmptyValue: '无',
+        HasChild: '节点下还有子节点，不允许删除',
+        NoDrop: '拖放操作失败，当前节点不是有效的类别',
+
+        User: '用户',
+        UserModel: {
+            UserName: '用户名',
+            Roles: '角色',
+            Created: '创建日期',
+            LastLogin: '最后登录时间',
+            Lockout: '已锁定',
+            IsApprove: '允许登录'
+        },
+
+        Media: '媒体',
+        Upload: '上传',
+        Image: '图片文件',
+        Audio: '音频文件',
+        Video: '视频文件',
+        FileUploadError: '文件“{0}”不能上传，错误：{1}',
+        Uploading: '正在上传{0}......，{1}%',
+        MediaModel: {
+            FieldName: '文件名',
+            Description: '描述',
+            Path: '路径',
+            Type: '类型',
+            UploadedDate: '上传日期',
+            Size: '文件大小'
+        },
+
+        Category: '类别',
+        CategoryModel: {
+            Title: '标题',
+            Image: '题图',
+            ParentId: '父类别',
+            SortOrder: '排序顺序',
+            Content: '内容'
+        },
+
+        Content: '文章',
+        ContentModel: {
+            ContentId: '编号',
+            Title: '标题',
+            CategoryId: '类别编号',
+            CategoryTitle: '类别标题',
+            Image: '题图',
+            SortOrder: '排序顺序',
+            Body: '内容',
+            Summary: '摘要',
+            Created: '创建时间',
+            Tags: '标签',
+            Hits: '点击量'
+
+        },
+
+        Tag: '标签',
+        TagManager: '标签管理',
+        AddTag: '请输入标签名称',
+
+        SearchDate: '日期：',
+        SearchText: '文本：',
+        SearchStart: '开始/取消搜索',
+        NoSearchValue: '请输入正确的搜索值再进行搜索',
+        ContentSearchTitle: ' > 开始时间：{0}，结束时间：{1}，文本：{2}',
+
+        AllArticle: '全部文章',
+        NoCategoryArticle: '未分类',
+        CategoryArticle: '文章类别'
 
     }
 })

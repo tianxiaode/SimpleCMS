@@ -239,3 +239,7 @@ $row-indicator-width: 5px, $row-indicator-selected-color: $panel-header-backgrou
 @include extjs-button-toolbar-small-ui( $ui: 'blue', $background-color: $color-blue, $border-color:darken($color-blue, 5%) );
 
 @include extjs-button-small-ui( $ui: 'header', $color: #999, $glyph-color: #919191, $background-color: transparent, $border-width: 0 );
+
+.x-form-readonly input, .x-form-readonly textarea, .x-form-readonly .x-form-cb-default::before {
+    background: rgba(226, 226, 226, 0.56);
+}

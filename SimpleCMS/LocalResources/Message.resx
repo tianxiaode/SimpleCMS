@@ -464,4 +464,7 @@
   <data name="OtherError" xml:space="preserve">
     <value>发生错误</value>
   </data>
+  <data name="ListFailure" xml:space="preserve">
+    <value>获取数据失败</value>
+  </data>
 </root>
