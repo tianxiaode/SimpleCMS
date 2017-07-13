@@ -10,7 +10,8 @@ Ext.define('SimpleCMS.view.main.Main', {
         'SimpleCMS.view.authentication.*',
         'SimpleCMS.view.pages.*',
         'SimpleCMS.view.article.Main',
-        'SimpleCMS.view.user.Main'
+        'SimpleCMS.view.user.Main',
+        'SimpleCMS.view.media.Main'
     ],
 
     controller: 'main',

@@ -1,0 +1,43 @@
+.thumb-wrap {
+    float: left;
+    display: block;
+    width: 180px;
+    height: 220px;
+    padding: 10px;
+}
+
+.thumb-wrap p {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.thumb-item-selected {
+    background-color: #d3e1f1;
+}
+
+.thumb-item-overItem {
+    background-color: #e7e7e7;
+}
+
+.thumb {
+    padding: 3px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.thumb img {
+    height: 160px;
+    width: 160px;
+}
+
+.thumb span {
+    height: 160px;
+    width: 160px;
+    font-size: 140px;
+    line-height: 160px;
+    color: #919191;
+}

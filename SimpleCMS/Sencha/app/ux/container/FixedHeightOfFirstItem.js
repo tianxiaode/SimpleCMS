@@ -17,6 +17,16 @@
         items[0]['height'] = height;
         items.push({ xtype: 'box', flex: 1 });
         me.callParent(arguments);
+    },
+
+    beforeLayout: function () {
+
+        var me = this,
+            height = Ext.Element.getViewportHeight() - 64,
+            item = me.items.getAt(0);
+        item.setHeight(height);
+
+        me.callParent(arguments);
     }
 
 });

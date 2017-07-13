@@ -227,15 +227,21 @@
      *      }
      *
      */
-    "js": [
-        {
-            "path": "${framework.dir}/build/ext-all-debug.js"
-        },
-        {
-            "path": "app.js",
-            "bundle": true
-        }
-    ],
+  "js": [
+    {
+      "path": "resources/plupload/plupload.full.min.js"
+    },
+    {
+      "path": "resources/plupload/i18n/zh_CN.js"
+    },
+    {
+      "path": "${framework.dir}/build/ext-all-debug.js"
+    },
+    {
+      "path": "app.js",
+      "bundle": true
+    }
+  ],
 
     
 

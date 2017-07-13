@@ -16,7 +16,6 @@
     initComponent: function () {
         var me = this,
             menus = me.getMenus();
-        console.log(menus);
         me.menu = menus;
         me.text = me.saveAndNewText;
         me.callParent(arguments);
