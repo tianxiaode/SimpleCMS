@@ -1,8 +1,24 @@
 ﻿Ext.define('SimpleCMS.view.article.Main', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.container.Container',
     xtype: 'articleView',
+
     requires: [
-        'SimpleCMS.view.media.Win'
+        'Ext.layout.container.Card',
+        'SimpleCMS.view.article.MainController',
+        'SimpleCMS.view.article.MainModel',
+        'SimpleCMS.view.article.List',
+        'SimpleCMS.view.article.CategoryEdit',
+        'SimpleCMS.view.article.ContentEdit',
+        'SimpleCMS.view.article.Details'
     ],
-    title: '文章管理'
+
+    controller: 'article',
+    viewModel: 'article',
+
+    layout: 'card',
+
+    items: [
+        {xtype: 'articleList'}
+    ]
+
 });

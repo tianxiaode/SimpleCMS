@@ -229,6 +229,9 @@
      */
   "js": [
     {
+      "path": "resources/tinymce/tinymce.min.js"
+    },
+    {
       "path": "resources/plupload/plupload.full.min.js"
     },
     {

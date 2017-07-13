@@ -1,5 +1,5 @@
 ﻿Ext.define("SimpleCMS.model.Category", {
-    extend: "Ext.data.Base",
+    extend: "SimpleCMS.model.Base",
 
     fields: [
         { name: 'ParentId', type: 'auto', defaultValue: null },

@@ -1,5 +1,5 @@
 ﻿Ext.define('SimpleCMS.model.Content', {
-    extend: 'Ext.data.Base',
+    extend: 'SimpleCMS.model.Base',
 
     fields: [
         { name: 'CategoryId', type: 'auto', defaultValue: null },
@@ -11,7 +11,6 @@
         { name: 'Tags', type: 'string', defaultValue: '' },
         { name: 'Created', type: 'date', dateFormat: I18N.DefaultDatetimeFormat},
         { name: 'Hits', type: 'int' },
-        { name: 'SortOrder', type: 'int', defaultValue: 0 },
-        ''
+        { name: 'SortOrder', type: 'int', defaultValue: 0 }
     ]
 });
