@@ -42,12 +42,12 @@
                                 containerScroll: true,
                                 dropZone: {
                                     handleNodeDrop: Ext.emptyFn
-                                },
-                                listeners: {
-                                    drop: 'onContentDrop'
                                 }
                             }
-                        ]
+                        ],
+                        listeners: {
+                            drop: 'onContentDrop'
+                        }
                     }
                 },
                 {
