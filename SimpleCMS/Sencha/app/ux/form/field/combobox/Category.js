@@ -16,7 +16,7 @@
         pageSize: 50,
         proxy: {
             type: 'format',
-            url: URL.get('category', 'select')
+            url: URI.get('category', 'select')
         }
 
     }

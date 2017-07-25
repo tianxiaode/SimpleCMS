@@ -1,5 +1,5 @@
 ﻿Ext.define('SimpleCMS.util.Url', {
-    alternateClassName: 'URL',
+    alternateClassName: 'URI',
     singleton: true,
 
     config: {

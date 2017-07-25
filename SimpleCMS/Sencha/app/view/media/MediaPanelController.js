@@ -108,7 +108,7 @@
         }
     },
 
-    descriptionEditUrl: URL.get('media', 'update'),
+    descriptionEditUrl: URI.get('media', 'update'),
     onDescriptionEditComplete: function (cmp, value, startValue, eOpts) {
         var me = this,
             record = cmp.activeRecord;
@@ -131,7 +131,7 @@
     },
 
 
-    mediaDeleteUrl: URL.get('media', 'destroy'),
+    mediaDeleteUrl: URI.get('media', 'destroy'),
     onMediaDelete: function () {
         var me = this;
         me.onDelete(me.lookupReference('mediaDataView').getSelection(),

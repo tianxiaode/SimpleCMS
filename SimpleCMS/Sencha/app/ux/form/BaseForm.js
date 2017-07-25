@@ -161,7 +161,7 @@
         me.fireEvent('beforeaddrecord', me);
         me.switchTitle(I18N.Add + I18N[entityName] );
         me.loadRecord(Ext.create(model, Ext.apply({}, me.getDefaultModelValue())));
-        me.url = URL.get(entityName.toLocaleLowerCase(), 'create');
+        me.url = URI.get(entityName.toLocaleLowerCase(), 'create');
         me.getViewModel().set('isEdit', false);
         me.onReset();
         me.fireEvent('afteraddrecord', me);
@@ -173,7 +173,7 @@
         if (Ext.isEmpty(entityName)) Ext.raise('没有定义entityName');
         if (initState === true) me.initState();
         me.switchTitle(I18N.Edit + I18N[entityName]);
-        me.url = URL.get(entityName.toLocaleLowerCase(), 'update');
+        me.url = URI.get(entityName.toLocaleLowerCase(), 'update');
         me.getViewModel().set('isEdit', true);
         me.onReset();
     }

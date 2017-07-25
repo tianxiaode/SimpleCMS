@@ -6,7 +6,7 @@
         this.getViewModel().set('count', store.getTotalCount());
     },
 
-    userCheckChangeUrl: URL.get('user', 'checkchange'),
+    userCheckChangeUrl: URI.get('user', 'checkchange'),
     onUserCheckChange: function (column, rowIndex, checked, record, e, eOpts) {
         var me = this;
         me.onColumnCheckChange(me.userCheckChangeUrl, record, column.dataIndex);
@@ -17,7 +17,7 @@
         this.getStore('users').load();
     },
 
-    userDeleteUrl: URL.get('user', 'destroy'),
+    userDeleteUrl: URI.get('user', 'destroy'),
     onUserDelete: function() {
         var me = this;
         me.onDelete(me.lookupReference('UserGrid').getSelection(),

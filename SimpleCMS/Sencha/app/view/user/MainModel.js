@@ -19,7 +19,7 @@
             pageSize: 100,
             proxy: {
                 type: 'format',
-                url: URL.get('user', 'read')
+                url: URI.get('user', 'read')
             },
             sorters: {
                 property: 'UserName',

@@ -9,7 +9,7 @@ Ext.define('SimpleCMS.view.authentication.AuthenticationController', {
             f = me.getView().getForm();
         if (f.isValid()) {
             f.submit({
-                url: URL.get('account', 'login'),
+                url: URI.get('account', 'login'),
                 waitMsg: I18N.LoginSubmitWaitMsg,
                 waitTitle: I18N.LoginSubmitWaitTitle,
                 success: function (form, action) {
@@ -27,7 +27,7 @@ Ext.define('SimpleCMS.view.authentication.AuthenticationController', {
             f = view.getForm();
         if (f.isValid()) {
             f.submit({
-                url: URL.get('account', 'passwordreset'),
+                url: URI.get('account', 'passwordreset'),
                 waitMsg: I18N.SaveWaitMsg,
                 waitTitle: I18N.PasswordResetTitle,
                 success: function (form, action) {
@@ -46,7 +46,7 @@ Ext.define('SimpleCMS.view.authentication.AuthenticationController', {
         window.history.back();
     },
 
-    verifyCodeUrl: URL.get('VerifyCode', ''),
+    verifyCodeUrl: URI.get('VerifyCode', ''),
     onRefrestVcode: function () {
         var me = this,
             view = me.getView(),

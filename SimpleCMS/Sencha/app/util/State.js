@@ -27,7 +27,7 @@
         if (!me.loaded) return;
         if (value) {
             Ext.Ajax.request({
-                url: URL.get('state', 'save'),
+                url: URI.get('state', 'save'),
                 params: { key: key, value: Ext.encode(value) }
             });
         }
@@ -37,7 +37,7 @@
         var me = this;
         Ext.Ajax.request({
             async: false,
-            url: URL.get('state', 'restore'),
+            url: URI.get('state', 'restore'),
             scope: me,
             success: function (response, opts) {
                 var me = this,

@@ -40,7 +40,7 @@
             },
             proxy: {
                 type: 'format',
-                url: URL.get('category', 'read')
+                url: URI.get('category', 'read')
             }
         },
         contents: {
@@ -49,7 +49,7 @@
             pageSize: 100,
             proxy: {
                 type: 'format',
-                url: URL.get('content', 'read')
+                url: URI.get('content', 'read')
             },
             sorters: {
                 property: 'ContentId',

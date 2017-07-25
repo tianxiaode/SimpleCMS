@@ -19,7 +19,7 @@
             proxy: {
                 type: 'format',
                 extraParams: { type: [1, 2, 3] },
-                url: URL.get('media', 'read')
+                url: URI.get('media', 'read')
             },
             sorters: {
                 property: 'Uploaded',
@@ -32,7 +32,7 @@
             field: ['Id', 'Text'],
             proxy: {
                 type: 'format',
-                url: URL.get('media', 'datelist')
+                url: URI.get('media', 'datelist')
             }
         }
     }

@@ -53,7 +53,7 @@
                 pageSize: 100,
                 proxy: {
                     type: 'format',
-                    url: URL.get('category', 'select')
+                    url: URI.get('category', 'select')
                 }
             },
             tpl: [
@@ -77,7 +77,7 @@
                 pageSize: 100,
                 proxy: {
                     type: 'format',
-                    url: URL.get('tag', 'read')
+                    url: URI.get('tag', 'read')
                 }
             },
             triggers: {

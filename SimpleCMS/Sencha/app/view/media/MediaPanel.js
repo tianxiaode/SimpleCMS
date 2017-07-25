@@ -85,7 +85,7 @@
                                 { title: I18N.Video, extensions: 'mp4,m4v,flv,mov' }
                             ]
                         },
-                        url: URL.get("media", 'create'),
+                        url: URI.get("media", 'create'),
                         autoStart: true
                     },
                     listeners:

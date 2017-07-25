@@ -29,7 +29,7 @@
             pageSize: 100,
             proxy: {
                 type: 'format',
-                url: URL.get('tag','read')
+                url: URI.get('tag','read')
             },
             sorters: {
                 property: 'Name',

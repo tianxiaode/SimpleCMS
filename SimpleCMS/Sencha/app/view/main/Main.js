@@ -40,7 +40,7 @@ Ext.define('SimpleCMS.view.main.Main', {
                     xtype: 'component',
                     reference: 'senchaLogo',
                     cls: 'sencha-logo',
-                    html: '<div class="main-logo"><img src="'+ URL.getResource('logo') + '">' + I18N.AppTitle + '</div>',
+                    html: '<div class="main-logo"><img src="'+ URI.getResource('logo') + '">' + I18N.AppTitle + '</div>',
                     width: 250
                 },
                 {

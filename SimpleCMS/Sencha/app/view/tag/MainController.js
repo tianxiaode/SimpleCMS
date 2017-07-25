@@ -11,7 +11,7 @@
     },
 
 
-    tagDeleteUrl: URL.get('tag', 'destroy'),
+    tagDeleteUrl: URI.get('tag', 'destroy'),
     onTagDelete: function() {
         var me = this,
             view = me.getView();
@@ -32,7 +32,7 @@
             });
     },
 
-    tagAddUrl: URL.get('tag', 'create'),
+    tagAddUrl: URI.get('tag', 'create'),
     onTagAdd: function () {
         var me = this,
             value = me.getView().getViewModel().get('tagName');

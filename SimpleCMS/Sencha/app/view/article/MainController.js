@@ -13,7 +13,7 @@
         ]);
     },
 
-    categoryDelUrl: URL.get('category', 'destroy'),
+    categoryDelUrl: URI.get('category', 'destroy'),
     onCategoryDelete: function () {
         var me = this,
             selection = me.getView().getViewModel().get('categorySelection');
@@ -129,7 +129,7 @@
         }
     },
 
-    categoryDetailsUrl: URL.get('category', 'details'),
+    categoryDetailsUrl: URI.get('category', 'details'),
     onCategoryEdit: function () {
         var me = this,
             selection = me.getViewModel().get('categorySelection');
@@ -314,7 +314,7 @@
         return this.onHighLightRenderer(value, metaData, record, rowIndex, colIndex, store, view);
     },
 
-    contentDetailsUrl: URL.get('content', 'details'),
+    contentDetailsUrl: URI.get('content', 'details'),
     onContentGridCellClick: function (viewTable, td, cellIndex, record, tr, rowIndex, e, eOpts) {
         var me = this;
         if (td.getAttribute('column-data-index') === 'title') {
@@ -382,7 +382,7 @@
         me.setCurrentView('articleDetails', { title: I18N.Content + '：' + record.data.Title, html: html });
     },
 
-    contentDeleteUrl: URL.get('content', 'destroy'),
+    contentDeleteUrl: URI.get('content', 'destroy'),
     onContentDelete: function () {
         var me = this;
         me.onDelete(me.lookupReference('ContentGrid').getSelection(),
@@ -406,7 +406,7 @@
         this.getStore('contents').load();
     },
 
-    contentDropUrl: URL.get('content', 'drop'),
+    contentDropUrl: URI.get('content', 'drop'),
     onContentDrop: function (node, data, overModel, dropPosition, dropHandlers, eOpts) {
         var me = this,
             cid = overModel.getId(),

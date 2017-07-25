@@ -144,7 +144,7 @@ Ext.define('SimpleCMS.view.main.MainController', {
         var me = this;
         Ext.Msg.wait(I18N.GetUserInfo);
         Ext.Ajax.request({
-            url: URL.get('account', 'userinfo'),
+            url: URI.get('account', 'userinfo'),
             success: function (response, opts) {
                 var me = this,
                     refs = me.getReferences(),
@@ -180,7 +180,7 @@ Ext.define('SimpleCMS.view.main.MainController', {
 
     onLogout: function () {
         Ext.Ajax.request({
-            url: URL.get('account', 'logout'),
+            url: URI.get('account', 'logout'),
             scope: this,
             success: function (response, opts) {
                 window.location.reload();
