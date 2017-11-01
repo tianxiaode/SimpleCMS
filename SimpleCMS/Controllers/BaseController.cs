@@ -44,7 +44,7 @@ namespace SimpleCMS.Controllers
         {
             get
             {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                return _userManager ?? HttpContext.GetOwinContext().Get<ApplicationUserManager>();
             }
             private set
             {
@@ -56,7 +56,7 @@ namespace SimpleCMS.Controllers
         {
             get
             {
-                return _roleManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationRoleManager>();
+                return _roleManager ?? HttpContext.GetOwinContext().Get<ApplicationRoleManager>();
             }
             private set
             {
@@ -68,7 +68,7 @@ namespace SimpleCMS.Controllers
         {
             get
             {
-                return _dbContext ?? HttpContext.GetOwinContext().GetUserManager<ApplicationDbContext>();
+                return _dbContext ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             }
             private set
             {
